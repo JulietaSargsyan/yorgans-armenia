@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Button  */
+.navButton {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    right: 2%;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.navButton__line {
+    width: 100%;
+    height: 3px;
+    background-color: #3c3c3c;
+    position: relative;
+    /* transition: 0.5s; */
+}
+
+.navButton__line::before,
+.navButton__line::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #3c3c3c;
+    position: absolute;
+    transition: 0.2s;
+}
+
+.navButton__line::before {
+    top: -10px;
+}
+
+.navButton__line::after {
+    top: 10px;
+}
+
+.navButton:hover .navButton__line::before {
+    top: -12px;
+}
+
+.navButton:hover .navButton__line::after {
+    top: 12px;
+}
+
+.navButton--active .navButton__line::before {
+    transform: rotateZ(45deg);
+    top: 0;
+}
+
+.navButton--active .navButton__line::after {
+    transform: rotateZ(-45deg);
+    top: 0;
+}
+
+.navButton--active:hover .navButton__line::before {
+    transform: rotateZ(0);
+    top: 0;
+}
+
+.navButton--active:hover .navButton__line::after {
+    transform: rotateZ(0);
+    top: 0;
+}
+
+.navButton--active .navButton__line {
+    background-color: rgba(0,0,0,0);
+}
+
+
+/* Header */
+.header {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3c3c3c;
+    padding: 0 5% 0 5%;
+    transform: translateY(-600px);
+    position: fixed;
+    transition: 0.4s ease
+    ;
+}
+
+.header--active {
+    transform: translateY(0);
+    transition: 0.4s ease;
+}
+
+.header__navBar {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin-right: 50px;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header .icon-YorgansLogo {
+    font-size: 45px;
+}
+
+.header__navBar a {
+    text-transform: capitalize;
+    font-size: 19px;
+    padding: 5px 20px;
+    transition: 0.5s;
+    position: relative;
+}
+
+.header__navBar a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    background-color: #cfcbcb;
+    transition: all 0.5s;
+}
+
+.header__navBar a:hover {
+    color: #cfcbcb;
+    transition: 0.5s;
+}
+
+
+
+.header__navBar a:hover::after{
+    width: 100%;
+   
+}
+
+/* Main */
+main {
+    width: 100%;
+    height: 100%;
+}
+
+.section1 {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/backgroundImg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sectiom1__backgroundOverlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section1 .icon-YorgansLogo {
+    font-size: 125px;
+    color: #fff;
+}
+
+
+

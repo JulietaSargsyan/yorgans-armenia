@@ -1,0 +1,32 @@
+@media only screen and (max-width: 800px) {
+   .header {
+      flex-direction: column;
+      padding: 20px;
+   }
+
+   .header__navBar {
+      margin-right: 0;
+   }
+  }
+
+  @media only screen and (max-width: 535px) {
+    .header__navBar a {
+        padding: 5px 8px;
+    }
+
+    .section1 .icon-YorgansLogo {
+        font-size: 68px;
+    }
+
+    .header {
+        height: auto;
+    }
+
+    .header__navBar {
+        flex-direction: column;
+    }
+
+    .navButton {
+        top: 15px;
+    }
+  }
